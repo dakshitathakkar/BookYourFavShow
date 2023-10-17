@@ -3,11 +3,12 @@ package com.bookyourshow.BookYourFavShow.entity;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "artist")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Artist {
+public class Artist implements Serializable{
 
     private long artistId;
     private String artistName;
